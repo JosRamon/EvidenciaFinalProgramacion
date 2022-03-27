@@ -1,0 +1,405 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box; 
+   
+}
+
+html{
+    height: auto;
+    min-height: 100%;
+}
+
+body{
+    background: linear-gradient(#fcfdfd, #aca9a9);
+
+}
+
+/*posiblemente lo use o no
+body{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 25px;
+    padding: 20px;
+}
+*/
+
+header{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  /* Alto de la barra, en tu caso sería 50px */
+  height: 60px;
+  
+  /* Color para el demo */
+ 
+}
+
+nav{
+    background: linear-gradient(#03a1fd, #0753f8);
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #51dddd;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #021f2c;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+/*código anterior*/
+
+.portada{
+    height: 60vh;
+    width: 100%;
+    background-image: url(../img/fondo.jpg);
+    background-attachment: fixed;
+    background-position: top right;
+}
+
+
+.sectionHome{
+    margin: 20px;
+    padding: 20px;
+}
+
+.sectionHome h2{
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+}
+
+.saludoWiMex{
+    
+    width: 65%;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+
+.imagenWimex {
+  
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  img{
+      max-width: 100%;
+  }
+
+
+
+  /*flexbox*/
+
+h1{
+   justify-content: flex-start;
+    text-shadow: 2px 2px 2px rgb(82, 148, 223);
+    color: #e63046;
+}
+
+h1 {
+    animation-duration: 2s;
+    animation-name: aparecer;
+ }
+ 
+ 
+ @keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+ }
+ 
+
+
+div.contenedor{
+    display: flex;
+    background-color: #5660ab;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+div.contenedor > p{
+    background-color: #4895ef;
+    color: #f1faee;
+    margin: 20px;
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+
+
+/*formulario Contacto*/
+.form{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+  
+  .form input{
+    width: 90%;
+    height: 30px;
+    margin: .5rem
+  }
+  
+  .form button{
+    padding: .5em 1em;
+    border:none;
+    background: rgb(100,200,255);
+    cursor: pointer;
+  }
+  
+  .form-container{
+    max-width:700px;
+    margin: 0 auto;
+  }
+  
+  .form-element {
+    display: block;
+    width: 80%;
+    margin: 1rem auto;
+    
+  }
+
+
+
+  legend{
+    font-size: 120%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.datosContacto{
+    background-color: rgb(198, 229, 162);
+}
+
+
+.listaServicios{
+    background-color: rgb(198, 229, 162);
+}
+
+
+.contactoInformacion{
+    background-color: rgb(198, 229, 162);
+}
+
+
+input {
+    font-size: 100%;
+}
+
+select {
+    font-size: 100%;
+}
+
+/*GRID*/
+.grid-layout{
+    display: grid;
+    /*definiremos las columnas que tendra el layout*/
+    grid-template-columns:auto auto auto;
+    /*definir las filas del layout*/
+
+    width: 80%;
+    margin: 0 auto;
+    
+    padding: 20px;
+    
+}
+
+
+.caja{
+    border: 2px solid black;
+    background-color: lightgray;
+    text-align: center;
+    line-height: 120px;
+   
+}
+
+
+
+
+/*tabla de servicios*/
+
+.tablaDeServicios table{
+    padding: 20px;
+    margin: 0 auto;
+    font-size: 30px;
+    
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+td{
+    text-align: center;
+}
+
+th{
+    color: rgb(232, 247, 232);
+    background-color: rgb(2, 87, 245);
+}
+/*modificación de renglones pares*/
+tr:nth-child(even)
+{
+    background-color: #f1fa;
+}
+
+tr:nth-child(odd){
+    background-color: #a8dadc;
+}
+
+
+caption {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    line-height: 70px;
+    font-weight: bold;
+    
+}
+
+.tablaDeServicios caption{
+    font-size: 45px;
+    padding: 20px;
+}
+
+
+
+
+
+
+/*pie de página*/
+footer{
+    padding: 20px;
+    margin: 20px;
+}
+
+footer ul{
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    text-decoration: none;
+  }
+
+footer a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+h4{
+    
+    padding: 10px;
+    margin: 10px;
+}
+
+.animacion{
+    margin-top: 25px;
+    width: 250px;
+    height: 250px;
+    background: green;
+    color: white;
+    border: 5px solid black;
+    font-size: 20px;
+    text-align: center;
+    line-height: 200px;
+    animation-name: desplazamiento;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes desplazamiento {
+    from{
+        margin-left: 10px;
+    }
+    to{
+        margin-left: 150px;
+    }
+}
