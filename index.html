@@ -1,140 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Responsive</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./estilos/estilos.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Login</title>
+     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+     <link rel="stylesheet" href="./assets/css/estilos.css">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">	
 </head>
 <body>
-    <nav class="menu"> 
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <a href="#" class="enlace">
-            <img src="./img/logo.jpg" alt="" class="logo">
-        </a>
-        <ul>
-            <li><a class="active" href="./index.html">Inicio</a></li>
-            <li><a href="./equipo.html">Equipo</a></li>
-            <li><a href="./servicios.html">Servicios</a></li>
-            <li><a href="./proyectos.html">Proyectos</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-    
+<div class="caja1">
+<form method="post" action="login.php">
+<div class="formtlo">Iniciar sesión</div>
+<div class="ub1">&#128273; Ingresar usuario</div>
+<input type="text" name="txtusuario">
+<div class="ub1">&#128274; Ingresar password</div>
 
+<input type="password" name="txtpassword" id="txtpassword">
 
+<div class="ub1">
+<input type="checkbox" onclick="verpassword()" >Mostrar contraseña
+ </div>
+<div class="ub1">Rol</div>
+<select name="rol">
+<option value="0" style="display:none;"><label>Seleccionar</label></option>
+<option value="Usuario">Usuario</option>
+<option value="Admin">Administrador</option>
+</select>
 
-     <!--Cabecera-->
-     <header>
-        <h1>Bienvenidos a WiMex</h1>
-    </header>
+<div align="center">
+<input type="submit" value="Ingresar">
 
-    <!--Etiqueta semántica para repreentar el contenido principal del body-->
-    <main class="sectionHome">
-
-        <div class="portada"></div>
-        
-        <section>
-            
-                <h2>Conoce qué es WiMex</h2>
-            
-        </section>
-
-
-        <div class="mi-web p-5 w-75 m-auto border bg-warning text-dark">
-            
-            <h2>Suscríbete</h2>
-            <h2>Recibe noticias día con día en tu correo</h2>
-            
-                <form class="form-inline" action="/action_page.php">
-                    <label for="email" class="mr-sm-2"><h2>Correo:</h2></label>
-                    <input type="email" class="form-control mb-2 mr-sm-2" placeholder="Enter email" id="email">                  
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                        <h2 style="font-size: 20px">Enviar datos</h2> 
-                    </button>
-                  </form>
-         
-            
-              
+<input type="reset" value="Cancelar">
+</div>
+</form>
+</div>
 
 
 
 
+<script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
 
 
-
-
-
-
-
-
-            
-        </div>
-        
-        <div class="container ">
-            
-            
-          
-            <!-- The Modal -->
-            <div class="modal" id="myModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                
-                  <!-- Modal Header -->
-                  <div class="modal-header">
-                    <h4 class="modal-title">Gracias por visitarnos</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-                  
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                    Presiona cerrar para continuar
-                  </div>
-                  
-                  <!-- Modal footer -->
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        
-    </main>
-
-    <!--Footer-->
-    <footer>
-        
-        <div class ="animacion">
-            Soy una animación
-        </div>
-
-
-        <h4>Redes sociales</h4>
-        <ul>
-            
-            <li><a href="https://www.facebook.com/ofWiMex"  target="_blank">Facebook</a></li>
-            <li><a href="https://www.instagram.com/wimexrm/" target="_blank">Instagram</a></li>
-            <li><a href="https://www.youtube.com/channel/UCdsZOpIQDIP920IR5ax2bSQ" target="_blank">Youtube</a></li>
-        </ul>
-
-
-    </footer>
-
-
-
-
-
-    <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 </body>
+<script>
+  function verpassword(){
+      var tipo = document.getElementById("txtpassword");
+      if(tipo.type == "password")
+	  {
+          tipo.type = "text";
+      }
+	  else
+	  {
+          tipo.type = "password";
+      }
+  }
+</script>
+
+
+
+
+
 </html>
